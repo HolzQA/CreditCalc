@@ -3,9 +3,9 @@ import java.math.RoundingMode;
 
 public class CreditPaymentService {
 
-    public double calculate(int s, double r, int n) {
-        double pr = r / 1200;
-        double result = (double) s * pr * Math.pow(pr + 1, n) / (Math.pow(pr + 1, n) - 1);
+    public double calculate(int credirSum, double percent, int months) {
+        double pr = percent / 1200;
+        double result = (double) credirSum * pr * Math.pow(pr + 1, months) / (Math.pow(pr + 1, months) - 1);
         return (int) result;
     }
 }
